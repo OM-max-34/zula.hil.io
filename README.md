@@ -146,13 +146,13 @@
         <div class="card">
 
             <p>
-                Hile net yer gösterir. Sapma oranı yüzde 16'dır.
+                Hile net yer gösterir. Sapma oranı %16'dır.
                 Düşmanın üstüne nişan alarak beklemezseniz yakalanmazsınız.
             </p>
 
             <!-- RESİM -->
             <div class="image-box">
-                <img src="zula.röntgen.png" alt="Röntgen">
+                <img src="röntgen.jpg" alt="Röntgen">
             </div>
 
             <!-- YAKALANMA -->
