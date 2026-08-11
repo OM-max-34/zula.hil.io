@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ZULA HİLE</title>
 
     <style>
@@ -14,21 +15,34 @@
             font-family: Arial, sans-serif;
         }
 
-        body {
-            background: #080808;
-            color: white;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* ÜST BAŞLIK */
+        body {
+            background: #080808;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ANA BAŞLIK */
         header {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+
             background:
-                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.95)),
-                radial-gradient(circle, #450000, #080808 70%);
+                linear-gradient(
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.95)
+                ),
+                radial-gradient(
+                    circle,
+                    #450000 0%,
+                    #080808 70%
+                );
         }
 
         header h1 {
@@ -42,10 +56,11 @@
         .container {
             width: 90%;
             max-width: 1100px;
-            margin: auto;
+            margin: 0 auto;
             padding: 80px 0;
         }
 
+        /* BÖLÜM BAŞLIĞI */
         .section-title {
             color: #ff2020;
             font-size: 35px;
@@ -54,36 +69,43 @@
             padding-left: 15px;
         }
 
+        /* KART */
         .card {
             background: #111;
             border: 1px solid #292929;
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 0 25px rgba(255,0,0,.08);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.08);
         }
 
+        /* AÇIKLAMA */
         .card p {
             color: #bbb;
             line-height: 1.7;
             margin-bottom: 25px;
         }
 
-        /* GÖRSEL ALANI */
+        /* RESİM ALANI */
         .image-box {
             width: 100%;
-            height: 400px;
+            min-height: 400px;
+
             border: 2px dashed #ff2020;
             border-radius: 10px;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             background: #090909;
             overflow: hidden;
         }
 
         .image-box img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            max-height: 600px;
+
             object-fit: contain;
             display: block;
         }
@@ -97,6 +119,7 @@
             margin-top: 20px;
         }
 
+        /* ALT KISIM */
         footer {
             text-align: center;
             padding: 30px;
@@ -106,10 +129,11 @@
         }
 
         /* TELEFON */
-        @media(max-width: 700px) {
+        @media (max-width: 700px) {
 
             header h1 {
                 font-size: 42px;
+                letter-spacing: 4px;
             }
 
             .container {
@@ -121,8 +145,16 @@
                 font-size: 30px;
             }
 
+            .card {
+                padding: 20px;
+            }
+
             .image-box {
-                height: 250px;
+                min-height: 250px;
+            }
+
+            .risk {
+                font-size: 19px;
             }
         }
     </style>
@@ -132,39 +164,38 @@
 
     <!-- ANA BAŞLIK -->
     <header>
-        <div>
-            <h1>ZULA HİLE</h1>
-        </div>
+        <h1>ZULA HİLE</h1>
     </header>
 
-
     <!-- RÖNTGEN BÖLÜMÜ -->
-    <section class="container">
+    <main>
+        <section class="container">
 
-        <h2 class="section-title">1] RÖNTGEN</h2>
+            <h2 class="section-title">1] RÖNTGEN</h2>
 
-        <div class="card">
+            <div class="card">
 
-            <p>
-                Hile net yer gösterir. Sapma oranı %16'dır.
-                Düşmanın üstüne nişan alarak beklemezseniz yakalanmazsınız.
-            </p>
+                <p>
+                    Hile net yer gösterir. Sapma oranı %16'dır.
+                    Düşmanın üstüne nişan alarak beklemezseniz yakalanmazsınız.
+                </p>
 
-            <!-- RESİM -->
-            <div class="image-box">
-                <img src="röntgen.jpg" alt="Röntgen">
+                <!-- RESİM -->
+                <div class="image-box">
+                    <img src="zula.röntgen.png" alt="Zula Röntgen Görseli">
+                </div>
+
+                <!-- YAKALANMA ORANI -->
+                <div class="risk">
+                    Yakalanma: %20
+                </div>
+
             </div>
 
-            <!-- YAKALANMA -->
-            <div class="risk">
-                Yakalanma: %20
-            </div>
+        </section>
+    </main>
 
-        </div>
-
-    </section>
-
-
+    <!-- ALT BİLGİ -->
     <footer>
         © 2026 ZULA HİLE
     </footer>
